@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        'main-bg': '#FAFBFB',
+        'main-bg': '#F9FBFB',
         'main-dark-bg': '#20232A',
         'secondary-dark-bg': '#33373E',
         'light-gray': '#F7F7F7',
@@ -35,6 +35,7 @@ module.exports = {
       },
       boxShadow: {
         menu: '0px 159px 95px rgba(13,12,34,0.01), 0px 71px 71px rgba(13,12,34,0.02), 0px 18px 39px rgba(13,12,34,0.02), 0px 0px 0px rgba(13,12,34,0.02)',
+        sidebar: '0 4px 14.72px 1.28px rgba(154,154,204,.1)',
       },
       screens: {
         'xs': '400px',

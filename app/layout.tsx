@@ -1,7 +1,6 @@
 import "./globals.css";
 import MyRoot from "@/components/Root";
 
-
 export const metadata = {
   title: "MUI APP",
 }

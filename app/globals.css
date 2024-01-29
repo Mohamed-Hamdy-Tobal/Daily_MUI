@@ -38,3 +38,21 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+/* ------------------------- */
+
+/* Header */
+.app-header {
+    background: #fff !important;
+    border-block-end: 1px solid #f3f3f3;
+    transition: all .1s ease;
+    box-shadow: 0 7px 26px rgba(154,154,204,.1);
+}
+.app-sidebar {
+    background:#fff;
+    border-inline-end: 1px solid #ededf5;
+    z-index: 103;
+}
+.shadow {
+    box-shadow: 14px 0 47px 0 rgb(94 92 154 / 10%)
+}

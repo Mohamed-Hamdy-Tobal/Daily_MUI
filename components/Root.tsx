@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react';
-import { styled, useTheme, Theme, CSSObject } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from './Header';
@@ -33,8 +33,8 @@ export default function MyRoot({ children }: { children: React.ReactNode }) {
         <Header open={open} handleDrawerOpen={handleDrawerOpen} />
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <Sidebar open={open} handleDrawerClose={handleDrawerClose} children={undefined} />
-            <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+            <Sidebar open={open} handleDrawerClose={handleDrawerClose} />
+            <Box component="main" sx={{ flexGrow: 1 }}>
                 <DrawerHeader/>
                 {children}
             </Box>
@@ -43,4 +43,4 @@ export default function MyRoot({ children }: { children: React.ReactNode }) {
     );
 }
 
-// 22
+// 35
