@@ -1,5 +1,5 @@
-import Header from "@/components/Header";
 import "./globals.css";
+import MyRoot from "@/components/Root";
 
 
 export const metadata = {
@@ -14,8 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <Header/>
-        {children}
+        <MyRoot>
+          {children}
+        </MyRoot>
       </body>
     </html>
   )
