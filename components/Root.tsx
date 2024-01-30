@@ -32,18 +32,34 @@ export default function MyRoot({ children }: { children: React.ReactNode }) {
 
     const darkMode = useSelector((state: RootState) => state.statesSlice.darkState);
 
+    React.useEffect(() => {
+        // Check if darkMode is true and conditionally add or remove the 'dark' class to/from the document body
+        if (darkMode) {
+            document.body.classList.remove('light');
+            document.body.classList.add('dark');
+        } else {
+            document.body.classList.remove('dark');
+            document.body.classList.add('light');
+        }
+
+        // Cleanup: remove the 'dark' class when the component unmounts
+        return () => {
+            document.body.classList.remove('dark');
+        };
+    }, [darkMode]);
+
     return (
-        <div className={`Root ${darkMode? 'dark' : 'light'}`}>
+        <>
             <Header open={open} handleDrawerOpen={handleDrawerOpen} />
             <Box sx={{ display: 'flex' }}>
                 <CssBaseline />
                 <Sidebar open={open} handleDrawerClose={handleDrawerClose} />
                 <Box component="main" sx={{ flexGrow: 1 }}>
-                    <DrawerHeader/>
+                    <DrawerHeader />
                     {children}
                 </Box>
             </Box>
-        </div>
+        </>
     );
 }
 

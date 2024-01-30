@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       backgroundColor: {
         'main-bg': '#F9FBFB',
-        'main-dark-bg': '#20232A',
+        'main-dark-bg': '#343848',
         'secondary-dark-bg': '#33373E',
         'light-gray': '#F7F7F7',
         'half-transparent': 'rgba(0, 0, 0, 0.5)',

@@ -79,7 +79,7 @@ const Header = ({ open, handleDrawerOpen }: { open: boolean, handleDrawerOpen: (
     const dispatch = useDispatch()
 
     return (
-        <AppBar position="fixed" open={open} className='app-header text-[#333] dark:text-[#fff] dark:bg-black'> 
+        <AppBar position="fixed" open={open} className='app-header text-[#333] dark:text-[#ffffff99] dark:bg-secondary-dark-bg' suppressHydrationWarning> 
             <Toolbar>
                 <IconButton
                     color="inherit"
@@ -106,22 +106,22 @@ const Header = ({ open, handleDrawerOpen }: { open: boolean, handleDrawerOpen: (
                     <div className="btns flex items-center">
 
                         {!darkMode ? (
-                            <IconButton color="inherit" onClick={() => dispatch(darkMood())}>
+                            <IconButton color="inherit" onClick={() => dispatch(darkMood())} className='dark:hover:text-white dark:hover:bg-[#b5b5b530]'>
                                 <DarkModeOutlined />
                             </IconButton>
                         ) : (
-                            <IconButton color="inherit" onClick={() => dispatch(darkMood())}>
+                            <IconButton color="inherit" onClick={() => dispatch(darkMood())} className='dark:hover:text-white dark:hover:bg-[#b5b5b530]'>
                                 <LightModeOutlined />
                             </IconButton>
                         )}
 
-                        <IconButton color="inherit">
+                        <IconButton color="inherit" className='dark:hover:text-white dark:hover:bg-[#b5b5b530]'>
                             <NotificationsOutlined />
                         </IconButton>
-                        <IconButton color="inherit">
+                        <IconButton color="inherit" className='dark:hover:text-white dark:hover:bg-[#b5b5b530]'>
                             <SettingsOutlined />
                         </IconButton>
-                        <IconButton color="inherit">
+                        <IconButton color="inherit" className='dark:hover:text-white dark:hover:bg-[#b5b5b530]'>
                             <Person2Outlined />
                         </IconButton>
                     </div>

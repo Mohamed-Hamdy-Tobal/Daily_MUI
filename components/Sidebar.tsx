@@ -68,13 +68,13 @@ const Sidebar = ({ open, handleDrawerClose }: { open: boolean, handleDrawerClose
     const theme = useTheme();
 
     return (
-        <Drawer variant="permanent" open={open} className="app-sidebar">
-            <DrawerHeader>
+        <Drawer variant="permanent" open={open} className="app-sidebar dark:border-[#3A3D4E] border-inherit dark:text-[#ffffff99] dark:bg-secondary-dark-bg">
+            <DrawerHeader className='dark:text-[#ffffff99] dark:bg-secondary-dark-bg'>
                 <IconButton onClick={handleDrawerClose}>
                     {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
                 </IconButton>
             </DrawerHeader>
-            <div className="main">
+            <div className="main dark:text-[#ffffff99] dark:bg-secondary-dark-bg flex-1">
                 <Divider className="sidebar-divider" />
                 <List className='pb-0'>
                     {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
@@ -87,6 +87,7 @@ const Sidebar = ({ open, handleDrawerClose }: { open: boolean, handleDrawerClose
                                 }}
                             >
                                 <ListItemIcon
+                                    className="sidebar-icon dark:text-[#ffffff99]"
                                     sx={{
                                         minWidth: 0,
                                         mr: open ? 3 : 'auto',
@@ -111,6 +112,7 @@ const Sidebar = ({ open, handleDrawerClose }: { open: boolean, handleDrawerClose
                                 }}
                             >
                                 <ListItemIcon
+                                    className="sidebar-icon dark:text-[#ffffff99]"
                                     sx={{
                                         minWidth: 0,
                                         mr: open ? 3 : 'auto',

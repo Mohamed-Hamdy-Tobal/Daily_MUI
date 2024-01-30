@@ -56,3 +56,15 @@ body {
 .shadow {
     box-shadow: 14px 0 47px 0 rgb(94 92 154 / 10%)
 }
+.dark .MuiPaper-root {
+    border: none;
+}
+.dark header.MuiPaper-root {
+    border-bottom: 1px solid #ffffff1a !important;
+}
+.dark .MuiDrawer-paperAnchorDockedLeft {
+    border-right: 1px solid #3A3D4E !important;
+}
+.light .MuiAppBar-colorPrimary {
+    background-color: #fff !important;
+}
