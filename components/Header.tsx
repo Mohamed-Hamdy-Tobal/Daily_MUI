@@ -3,14 +3,15 @@
 import * as React from 'react';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import { styled, alpha, useTheme } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import { DarkModeOutlined, LightModeOutlined, NotificationsOutlined, Person2Outlined, SettingsOutlined } from '@mui/icons-material';
-// import { useTheme } from '@emotion/react';
+import type { RootState } from '@/Store/store';
+import { useSelector, useDispatch } from 'react-redux';
+import { darkMood } from '@/Store/Reducers/statesSlice';
 
 const drawerWidth = 240;
 
@@ -74,10 +75,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const Header = ({ open, handleDrawerOpen }: { open: boolean, handleDrawerOpen: () => void }) => {
 
-    const theme = useTheme()
+    const darkMode = useSelector((state: RootState) => state.statesSlice.darkState);
+    const dispatch = useDispatch()
 
     return (
-        <AppBar position="fixed" open={open} className='app-header text-[#333]'>
+        <AppBar position="fixed" open={open} className='app-header text-[#333] dark:text-[#fff] dark:bg-black'> 
             <Toolbar>
                 <IconButton
                     color="inherit"
@@ -103,12 +105,12 @@ const Header = ({ open, handleDrawerOpen }: { open: boolean, handleDrawerOpen: (
                     </Search>
                     <div className="btns flex items-center">
 
-                        {theme.palette.mode == 'light' ? (
-                            <IconButton color="inherit">
+                        {!darkMode ? (
+                            <IconButton color="inherit" onClick={() => dispatch(darkMood())}>
                                 <DarkModeOutlined />
                             </IconButton>
                         ) : (
-                            <IconButton color="inherit">
+                            <IconButton color="inherit" onClick={() => dispatch(darkMood())}>
                                 <LightModeOutlined />
                             </IconButton>
                         )}

@@ -1,5 +1,7 @@
+import { Providers } from "@/Store/provider";
 import "./globals.css";
 import MyRoot from "@/components/Root";
+import { ThemeProvider } from "next-themes"
 
 export const metadata = {
   title: "MUI APP",
@@ -13,9 +15,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <MyRoot>
-          {children}
-        </MyRoot>
+        <Providers>
+          <MyRoot>
+            {children}
+          </MyRoot>
+        </Providers>
       </body>
     </html>
   )

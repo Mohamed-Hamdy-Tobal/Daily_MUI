@@ -1,15 +1,17 @@
+'use client';
+
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface CountriesState {
+interface ModeState {
   darkState: boolean;
 }
 
-const initialState: CountriesState = {
+const initialState: ModeState = {
   darkState: false,
 }
 
-const countriesSlice = createSlice({
-  name: 'countriesSlice',
+const statesSlice = createSlice({
+  name: 'statesSlice',
   initialState,
   reducers: {
     darkMood: (state) => {
@@ -18,6 +20,6 @@ const countriesSlice = createSlice({
   },
 });
 
-export const { darkMood } = countriesSlice.actions;
+export const { darkMood } = statesSlice.actions;
 
-export default countriesSlice.reducer;
+export default statesSlice.reducer;

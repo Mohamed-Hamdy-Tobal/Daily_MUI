@@ -43,7 +43,7 @@ body {
 
 /* Header */
 .app-header {
-    background: #fff !important;
+    background: #fff;
     border-block-end: 1px solid #f3f3f3;
     transition: all .1s ease;
     box-shadow: 0 7px 26px rgba(154,154,204,.1);
