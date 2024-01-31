@@ -16,6 +16,7 @@
     "@mui/icons-material": "^5.15.6",
     "@mui/material": "^5.15.6",
     "@mui/styled-engine-sc": "^6.0.0-alpha.13",
+    "@mui/x-data-grid": "^6.19.2",
     "@reduxjs/toolkit": "^2.1.0",
     "@types/jsonwebtoken": "^9.0.5",
     "cloudinary": "^1.41.1",

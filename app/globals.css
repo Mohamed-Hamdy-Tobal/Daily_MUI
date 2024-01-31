@@ -81,6 +81,11 @@ body.dark ::-webkit-scrollbar-track {
     background: #999;
 }
 
+.m-p {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 /* ------------------------- */
 
 /* Header */
@@ -118,6 +123,6 @@ body.dark ::-webkit-scrollbar-track {
     color: #333;
 }
 .dark .MuiAppBar-colorPrimary {
-    background-color: #343848 !important;
+    background-color: #2A2E3F !important;
     color: #fff;
 }
