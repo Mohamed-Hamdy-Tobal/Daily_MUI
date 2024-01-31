@@ -1,11 +1,11 @@
 import React from 'react'
 
-const page = () => {
+const Bar = () => {
     return (
         <div>
-            Create
+            Bar
         </div>
     )
 }
 
-export default page
+export default Bar

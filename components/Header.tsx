@@ -90,6 +90,7 @@ const Header = ({ open, handleDrawerOpen }: { open: boolean, handleDrawerOpen: (
                         marginRight: 5,
                         ...(open && { display: 'none' }),
                     }}
+                    className='dark:text-[#ffffff99] dark:hover:text-white dark:hover:bg-[#b5b5b530]'
                 >
                     <MenuIcon />
                 </IconButton>

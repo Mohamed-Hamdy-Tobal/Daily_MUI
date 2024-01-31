@@ -9,11 +9,15 @@
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
 }
-*, ::after, ::before {
+
+*,
+::after,
+::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 @media (prefers-color-scheme: dark) {
     :root {
         --foreground-rgb: 255, 255, 255;
@@ -21,22 +25,60 @@
         --background-end-rgb: 0, 0, 0;
     }
 }
-@layer components{
+
+@layer components {
     .container {
         @apply px-5 mx-auto
     }
+
     .ele-center {
         @apply flex justify-center items-center
     }
+
     .ele-center-col {
         @apply flex justify-center items-center flex-col
     }
+
     .main-btn {
         @apply bg-[#42b0d1] hover:bg-[#81d6e1] transition-all duration-300
     }
 }
+
 body {
     font-family: 'Poppins', sans-serif;
+}
+
+/* Default light mode scrollbar styles */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d6dbd7;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #cfd2d0;
+}
+
+/* Dark mode scrollbar styles */
+body.dark ::-webkit-scrollbar-thumb {
+    background: #505762;
+    /* Change to your desired dark mode color */
+}
+
+body.dark ::-webkit-scrollbar-thumb:hover {
+    background: #5d646f;
+    /* Change to your desired dark mode hover color */
+}
+
+body.dark ::-webkit-scrollbar-track {
+    background: #999;
 }
 
 /* ------------------------- */
@@ -46,25 +88,36 @@ body {
     background: #fff;
     border-block-end: 1px solid #f3f3f3;
     transition: all .1s ease;
-    box-shadow: 0 7px 26px rgba(154,154,204,.1);
+    box-shadow: 0 7px 26px rgba(154, 154, 204, .1);
 }
+
 .app-sidebar {
-    background:#fff;
+    background: #fff;
     border-inline-end: 1px solid #ededf5;
     z-index: 103;
 }
+
 .shadow {
     box-shadow: 14px 0 47px 0 rgb(94 92 154 / 10%)
 }
+
 .dark .MuiPaper-root {
     border: none;
 }
+
 .dark header.MuiPaper-root {
     border-bottom: 1px solid #ffffff1a !important;
 }
+
 .dark .MuiDrawer-paperAnchorDockedLeft {
     border-right: 1px solid #3A3D4E !important;
 }
+
 .light .MuiAppBar-colorPrimary {
     background-color: #fff !important;
+    color: #333;
+}
+.dark .MuiAppBar-colorPrimary {
+    background-color: #343848 !important;
+    color: #fff;
 }
