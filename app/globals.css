@@ -42,6 +42,9 @@
     .main-btn {
         @apply bg-[#42b0d1] hover:bg-[#81d6e1] transition-all duration-300
     }
+    .main-page {
+        @apply m-p dark:bg-main-dark-bg dark:text-white min-h-[100vh]
+    }
 }
 
 body {
@@ -141,4 +144,43 @@ body.dark ::-webkit-scrollbar-track {
     .MuiDataGrid-root {
         width: 700px;
     }
+}
+.dark .MuiDataGrid-toolbarContainer button{
+    color: #b6b3b3 !important
+}
+.MuiDataGrid-toolbarContainer {
+    padding: 15px;
+}
+
+.dark .MuiDataGrid-cellCheckbox svg ,
+.dark .MuiDataGrid-columnHeaderTitleContainerContent svg {
+    color: #fff;
+}
+.dark .MuiInputLabel-formControl {
+    color: #999
+}
+.dark .css-batk84-MuiInputBase-root-MuiFilledInput-root::before ,
+.dark .css-batk84-MuiInputBase-root-MuiFilledInput-root:hover::before {
+    border-color: #999;
+}
+.css-1tfwfi7-MuiFormControl-root-MuiTextField-root {
+    flex: 1;
+}
+
+/* Responsive styling for screens with a max-width of 600px (adjust as needed) */
+@media (max-width: 640px) {
+    .css-1tfwfi7-MuiFormControl-root-MuiTextField-root {
+        flex: none; /* Reset flex property */
+        width: 100%; /* Set width to 100% for column layout */
+    }
+}
+.dark #filled-select-currency-helper-text {
+    color: #ddd;
+}
+.dark .MuiInputBase-input {
+    caret-color: #dedede;
+    color: #fff;
+}
+.dark .MuiFilledInput-underline svg {
+    color: #fff !important;
 }

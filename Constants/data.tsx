@@ -52,3 +52,28 @@ export const columns: GridColDef[] = [
     }
     },
 ];
+
+export const rowsContact: GridRowsProp = [
+    { id: 1, registerid: '464623', name: 'Harvie Roxi', age:33, phone: '(444)945-553', email: 'harvieroxi@gmail.com' , address:'Alex', city:'Zaid', zipCode:'823579'},
+    { id: 2, registerid: '621342', name: 'Michal Jonson', age:23, phone: '(333)920-345', email: 'michaljonson@gmail.com' , address:'Cairo', city:'Zaid', zipCode:'245678'},
+    { id: 3, registerid: '179572', name: 'Robert Yaya', age:55, phone: '(222)625-633', email: 'robertyaya@gmail.com' , address:'Alex', city:'Zaid', zipCode:'253456'},
+    { id: 4, registerid: '235145', name: 'Sami Soni', age:87, phone: '(556)456-367', email: 'samisoni@gmail.com' , address:'Cairo', city:'Zaid', zipCode:'267531'},
+    { id: 5, registerid: '679672', name: 'Eleina Downi', age:19, phone: '(111)456-632', email: 'eleinadowni@gmail.com' , address:'Cairo', city:'Zaid', zipCode:'572727'},
+    { id: 6, registerid: '124797', name: 'Tom Hazard', age:22, phone: '(777)637-627', email: 'tomhazard@gmail.com' , address:'Alex', city:'Zaid', zipCode:'88425'},
+    { id: 7, registerid: '976832', name: 'Bool Keen', age:42, phone: '(222)126-900', email: 'boolkeen@gmail.com' , address:'Cairo', city:'Zaid', zipCode:'658967'},
+    { id: 8, registerid: '246346', name: 'Jonior Martine', age:35, phone: '(999)567-513', email: 'joniormartin@gmail.com' , address:'Alex', city:'Zaid', zipCode:'694002'},
+    { id: 9, registerid: '685342', name: 'Alvaris Fermino', age:31, phone: '(666)902-683', email: 'alvarisfermino@gmail.com' , address:'Cairo', city:'Zaid', zipCode:'687860'},
+];
+
+// -> Field Required
+export const columnsContact: GridColDef[] = [
+{ field: 'id', headerName: 'ID', width: 40, align: 'center', headerAlign: 'center'},
+{ field: 'registerid', headerName: 'Register ID', align: 'center', headerAlign: 'center'},
+{ field: 'name', headerName: 'Name', flex:1, align: 'center', headerAlign: 'center'},
+{ field: 'age', headerName: 'Age', align: 'center', headerAlign: 'center'},
+{ field: 'phone', headerName: 'Phone', flex:1, align: 'center', headerAlign: 'center'},
+{ field: 'email',headerName: 'Email', flex:1, align: 'center', headerAlign: 'center',},
+{ field: 'address',headerName: 'Address', flex:1, align: 'center', headerAlign: 'center',},
+{ field: 'city',headerName: 'City', flex:1, align: 'center', headerAlign: 'center',},
+{ field: 'zipCode',headerName: 'Zip Code', flex:1, align: 'center', headerAlign: 'center',},
+];

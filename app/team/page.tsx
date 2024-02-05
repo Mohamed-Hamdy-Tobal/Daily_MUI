@@ -18,7 +18,7 @@ const Team = () => {
     }));
 
     return (
-        <div className="Team m-p dark:bg-main-dark-bg dark:text-white">
+        <div className="Team main-page">
             <div className="container">
                 <Title title="Team" />
                 <div style={{ height: 600, width: '100%' }} className='dark:text-white'>
