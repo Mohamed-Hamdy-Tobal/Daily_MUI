@@ -1,31 +1,33 @@
 'use client'
 
 import * as React from 'react';
-import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
+import { DataGrid } from '@mui/x-data-grid';
 import Title from '@/components/Title';
+import { columns, rows } from '@/Constants/data';
 
-const rows: GridRowsProp = [
-    { id: 1, col1: 'Hello', col2: 'World' },
-    { id: 2, col1: 'DataGridPro', col2: 'is Awesome' },
-    { id: 3, col1: 'MUI', col2: 'is Amazing' },
-];
-
-const columns: GridColDef[] = [
-    { field: 'col1', headerName: 'Column 1', width: 150 },
-    { field: 'col2', headerName: 'Column 2', width: 150 },
-];
 
 const Team = () => {
+    // Assuming columns is an array of column configurations for DataGrid
+    const updatedColumns = columns.map(column => ({
+        ...column,
+        cellClassName: 'dark:text-white', // Add dark:text-white class to cellClassName
+    }));
+    const updatedRows = rows.map(row => ({
+        ...row,
+        cellClassName: 'dark:text-white', // Add dark:text-white class to cellClassName
+    }));
+
     return (
         <div className="Team m-p dark:bg-main-dark-bg dark:text-white">
             <div className="container">
                 <Title title="Team" />
-                <div style={{ height: 600, width: '100%' }}>
-                    <DataGrid rows={rows} columns={columns} />
+                <div style={{ height: 600, width: '100%' }} className='dark:text-white'>
+                    <DataGrid rows={updatedRows} columns={updatedColumns} />
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
+
 
 export default Team

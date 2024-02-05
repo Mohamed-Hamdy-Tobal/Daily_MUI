@@ -126,3 +126,19 @@ body.dark ::-webkit-scrollbar-track {
     background-color: #2A2E3F !important;
     color: #fff;
 }
+.MuiDataGrid-columnHeaderTitle {
+    font-weight: 800;
+}
+.dark .MuiDataGrid-columnHeaderTitle,
+.dark .MuiDataGrid-main .css-ptiqhd-MuiSvgIcon-root {
+    color: #ddd !important
+}
+.dark .MuiDataGrid-footerContainer div ,
+.dark .MuiDataGrid-footerContainer svg {
+    color: #fff !important
+}
+@media (max-width: 567px) {
+    .MuiDataGrid-root {
+        width: 700px;
+    }
+}
